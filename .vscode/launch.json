@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // "name": "(gdb) Launch latest build",
+            // "type": "cppdbg",
+            // "request": "launch",
+            // "program": "${workspaceFolder}/bin/main_latest",
+            // "args": [],
+            // "stopAtEntry": true,
+            // "cwd": "${workspaceFolder}",
+            // "externalConsole": true,
+            // "MIMode": "gdb",
+            // "miDebuggerPath": "/usr/bin/gdb",
+            // "preLaunchTask": "build-and-copy-latest",
+            // "setupCommands": [
+            //     {
+            //         "description": "Enable pretty-printing for gdb",
+            //         "text": "-enable-pretty-printing",
+            //         "ignoreFailures": true
+            //     }
+            // ]
+        }
+    ]
+}
