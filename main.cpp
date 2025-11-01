@@ -8,6 +8,9 @@
 // #include "arrays/common_in_three_arr.cpp"
 #include "arrays/second_max.cpp"
 #include "arrays/union.cpp"
+#include "arrays/check_if_sorted.cpp"
+#include "arrays/remove_duplicated.cpp"
+#include "arrays/left_rotate.cpp"
 
 #include "string/rev.cpp"
 #include "string/palindrome.cpp"
@@ -24,8 +27,8 @@ int main()
     auto s_arr3 = getSortedTestArray3();
 
     
-    printVector(s_arr1);
-    printVector(s_arr2);
+    //printVector(s_arr1);
+    printVector(s_arr3);
     auto start = chrono::high_resolution_clock::now(); // start timer
 
     // auto rev = reverseArray(arr);
@@ -34,14 +37,17 @@ int main()
     // auto ans = common_sorted_three(s_arr1, s_arr2, s_arr3);
     //auto ans = strPalindrome("racecare");
     // auto ans = second_max(s_arr1);
-    auto ans = FindUnion_2(s_arr2,s_arr1);
+    // auto ans = checkIfSorted(s_arr3);
+    // removeDuplicates(s_arr3);
+    leftRotate(s_arr3);
     
     
     auto end = chrono::high_resolution_clock::now(); // end timer
     chrono::duration<double, milli> duration = end - start;
 
     cout <<"SOLUTION ";// << ans <<"\n";
-    printVector(ans);
+    //printVector(ans);
+    printVector(s_arr3);
 
     cout << "Execution Time: " << duration.count() << " ms" << endl;
 }

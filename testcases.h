@@ -18,8 +18,7 @@ vector<int> getSortedTestArray2()
 }
 vector<int> getSortedTestArray3()
 {
-    return {0, 3, 9, 15, 27, 30};
-    ;
+    return {1,2,3,4,5};
 }
 
 void printVector(const vector<int> &v)
