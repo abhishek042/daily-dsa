@@ -39,7 +39,7 @@ int main()
     // auto ans = second_max(s_arr1);
     // auto ans = checkIfSorted(s_arr3);
     // removeDuplicates(s_arr3);
-    rotate(s_arr3,1,3);
+    rotate(s_arr3,0,2);
     
     
     auto end = chrono::high_resolution_clock::now(); // end timer

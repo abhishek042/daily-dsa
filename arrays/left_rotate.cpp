@@ -21,10 +21,10 @@ void rotate(vector<int> &arr, int dir, int rotateBy)
 
     if (dir == 1)
     {
-        //cout << "Left Rotation\n";
+        // cout << "Left Rotation\n";
         vector<int> temp(arr.begin(), arr.begin() + rotateBy);
-        //cout << "Temp vector\n";
-        //printVector(temp);
+        // cout << "Temp vector\n";
+        // printVector(temp);
         int shift = rotateBy;
         while (shift != 0)
         {
@@ -34,18 +34,27 @@ void rotate(vector<int> &arr, int dir, int rotateBy)
             }
             shift--;
         }
-        //cout << "rotateBy " << rotateBy << "\n";
+        // cout << "rotateBy " << rotateBy << "\n";
         for (int i = rotateBy; i > 0; i--)
         {
             arr[arr.size() - rotateBy] = temp[temp.size() - i];
-            //cout << "inserted at: " << arr.size() - rotateBy << " With value: " << temp[temp.size() - i] << "\n";
+            // cout << "inserted at: " << arr.size() - rotateBy << " With value: " << temp[temp.size() - i] << "\n";
             rotateBy--;
         }
     }
     else if (dir == 0)
     {
         cout << "Right Rotation\n";
-        vector<int> temp(arr.end(), arr.end() - rotateBy);
+        vector<int> temp(arr.begin() + (arr.size() - rotateBy), arr.end());
+        cout << "Temp vector\n";
+        printVector(temp);
+
+        for (int i = arr.size() - rotateBy; i > 0; i--)
+        {
+            cout <<"i = "<< i << "\n";
+            cout << "Replace Index " << arr.size()-(rotateBy-i)<< " BY " << arr[arr.size() - rotateBy - i] << "\n";
+            arr[arr.size()-(rotateBy-i)]= arr[arr.size() - i];
+        }
     }
     else
     {
